@@ -1,9 +1,9 @@
-import { mergeObjects } from "./utils";
+import { useLocaleStorage } from "./hooks";
 
 function App() {
-  const test1 = mergeObjects({ h: 1 }, { v: 2 });
+  const [value] = useLocaleStorage("test");
 
-  return JSON.stringify(test1);
+  return value;
 }
 
 export default App;
